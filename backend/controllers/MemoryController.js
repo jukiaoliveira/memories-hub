@@ -156,7 +156,7 @@ const addComment = async (req, res) => {
       return res.status(404).json({ msg: "Memória não encontrada!" });
     }
 
-    memory.comments.push = (comment);
+    memory.comments.push(comment);
 
     await memory.save();
 
