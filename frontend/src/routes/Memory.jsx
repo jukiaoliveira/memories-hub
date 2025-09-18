@@ -6,6 +6,8 @@ import { useParams } from "react-router-dom";
 
 import { toast } from "react-toastify";
 
+import './Memory.css';
+
 const Memory = () => {
   const { id } = useParams();
 
@@ -22,7 +24,7 @@ const Memory = () => {
     };
 
     getMemory();
-  });
+  }, [id]);
 
   if (!memory) return <p>Carregando...</p>;
 
